@@ -14,6 +14,9 @@ import RiskDashboard from './pages/risk/RiskDashboard';
 import Limits from './pages/risk/Limits';
 import StressTests from './pages/risk/StressTests';
 import Alerts from './pages/risk/Alerts';
+import AIAssistant from './pages/ai/AIAssistant';
+import About from './pages/About';
+import ChatWidget from './components/slm/ChatWidget';
 
 export default function App() {
   return (
@@ -42,8 +45,11 @@ export default function App() {
             <Route path="/risk/limits" element={<Limits />} />
             <Route path="/risk/stress-tests" element={<StressTests />} />
             <Route path="/risk/alerts" element={<Alerts />} />
+            <Route path="/ai/assistant" element={<AIAssistant />} />
+            <Route path="/about" element={<About />} />
           </Route>
         </Routes>
+        <ChatWidget />
       </BrowserRouter>
     </ConfigProvider>
   );

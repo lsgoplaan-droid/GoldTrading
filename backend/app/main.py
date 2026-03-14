@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.database import engine, Base
-from app.routers import prices, trading, logistics, risk, dashboard
+from app.routers import prices, trading, logistics, risk, dashboard, slm
 
 
 @asynccontextmanager
@@ -45,6 +45,7 @@ app.include_router(trading.router, prefix="/api/v1")
 app.include_router(logistics.router, prefix="/api/v1")
 app.include_router(risk.router, prefix="/api/v1")
 app.include_router(dashboard.router, prefix="/api/v1")
+app.include_router(slm.router, prefix="/api/v1")
 
 
 @app.get("/api/health")

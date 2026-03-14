@@ -7,3 +7,44 @@ body {
 #root {
   min-height: 100vh;
 }
+
+/* SLM Chat Markdown Styles */
+.slm-markdown p {
+  margin: 4px 0;
+}
+
+.slm-markdown p:first-child {
+  margin-top: 0;
+}
+
+.slm-markdown p:last-child {
+  margin-bottom: 0;
+}
+
+.slm-markdown strong {
+  font-weight: 600;
+}
+
+.slm-markdown ul,
+.slm-markdown ol {
+  margin: 4px 0;
+  padding-left: 20px;
+}
+
+.slm-markdown li {
+  margin: 2px 0;
+}
+
+.slm-markdown h1,
+.slm-markdown h2,
+.slm-markdown h3 {
+  margin: 8px 0 4px;
+  font-size: inherit;
+  font-weight: 600;
+}
+
+.slm-markdown hr {
+  margin: 8px 0;
+  border: none;
+  border-top: 1px solid #e8e8e8;
+}

@@ -12,6 +12,8 @@ import {
   BarChartOutlined,
   ThunderboltOutlined,
   AlertOutlined,
+  RobotOutlined,
+  InfoCircleOutlined,
 } from '@ant-design/icons';
 import { useNavigate, useLocation } from 'react-router-dom';
 
@@ -54,13 +56,22 @@ export default function Sidebar() {
         { key: '/risk/alerts', icon: <AlertOutlined />, label: 'Alerts' },
       ],
     },
+    {
+      key: 'ai',
+      icon: <RobotOutlined />,
+      label: 'AI / SLM',
+      children: [
+        { key: '/ai/assistant', icon: <RobotOutlined />, label: 'AI Assistant' },
+      ],
+    },
+    { key: '/about', icon: <InfoCircleOutlined />, label: 'About' },
   ];
 
   return (
     <Menu
       mode="inline"
       selectedKeys={[location.pathname]}
-      defaultOpenKeys={['trading', 'logistics', 'risk']}
+      defaultOpenKeys={['trading', 'logistics', 'risk', 'ai']}
       items={items}
       onClick={({ key }) => navigate(key)}
       style={{ borderRight: 0 }}
