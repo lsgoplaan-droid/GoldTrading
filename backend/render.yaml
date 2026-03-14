@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: gold-trading-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DATABASE_URL
+        value: sqlite:///./gold_trading.db
+      - key: USE_MOCK_PRICES
+        value: "true"
+      - key: GOLD_API_KEY
+        value: ""
